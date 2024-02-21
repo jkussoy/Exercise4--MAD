@@ -7,30 +7,47 @@ const Registration = () => {
   };
 
   return (
+    <ScrollView>
     <View>
       <Text style={styles.title}>Registration </Text>
-      <ScrollView>
         <Text style={styles.usrnm}>Name</Text>
         <TextInput
           style={styles.inputcollum}
-          placeholder="Masukan Nama Lengkap anda"
+          placeholder="Masukan nama lengkap anda"
           placeholderTextColor="black"
-          secureTextEntry={false}
         />
         <Text style={styles.pass}>Username</Text>
         <TextInput
           style={styles.inputcollum}
-          placeholder="Masukan Username Anda"
+          placeholder="Masukan username anda"
           placeholderTextColor="black"
-          secureTextEntry={true} 
+        />
+        <Text style={styles.pass}>Email</Text>
+        <TextInput
+          style={styles.inputcollum}
+          placeholder="Masukan email anda"
+          placeholderTextColor="black"
+        />
+        <Text style={styles.pass}>Address</Text>
+        <TextInput
+          style={styles.inputcollum}
+          placeholder="Masukan alamat anda"
+          placeholderTextColor="black"
+        />
+        <Text style={styles.pass}>Phone Number</Text>
+        <TextInput
+          style={styles.inputcollum}
+          keyboardType='number-pad'
+          placeholder="Masukan Nomor telepon anda"
+          placeholderTextColor="black"
         />
         <TouchableOpacity
           onPress={handlePress}
           style={styles.touchableOpacity}>
           <Text style={styles.touchableText}>Register</Text>
         </TouchableOpacity>
-      </ScrollView>
     </View>
+    </ScrollView>
   );
 };
 
