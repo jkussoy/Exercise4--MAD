@@ -7,6 +7,7 @@ import {
   TextInput,
   StyleSheet,
   TouchableOpacity,
+  
 } from 'react-native';
 import React from 'react';
 import Registration from './src/components/Registration';
