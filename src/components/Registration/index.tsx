@@ -20,7 +20,7 @@ const Registration = () => {
     <ScrollView>
       <View>
         <Text style={styles.title}>Registration </Text>
-        <Text style={styles.usrnm}>Name</Text>
+        <Text style={styles.usrnm}>Name </Text>
         <TextInput
           style={styles.inputcollum}
           placeholder="Masukan nama lengkap anda"
@@ -28,7 +28,7 @@ const Registration = () => {
           value={name}
           onChangeText={setName}
         />
-        <Text style={styles.pass}>Username</Text>
+        <Text style={styles.pass}>Username </Text>
         <TextInput
           style={styles.inputcollum}
           placeholder="Masukan username anda"
@@ -36,7 +36,7 @@ const Registration = () => {
           value={username}
           onChangeText={setUsername} 
         />
-        <Text style={styles.pass}>Email</Text>
+        <Text style={styles.pass}>Email </Text>
         <TextInput
           style={styles.inputcollum}
           placeholder="Masukan email anda"
@@ -44,7 +44,7 @@ const Registration = () => {
           value={email}
           onChangeText={setEmail}
         />
-        <Text style={styles.pass}>Address</Text>
+        <Text style={styles.pass}>Address </Text>
         <TextInput
           style={styles.inputcollum}
           placeholder="Masukan alamat anda"
@@ -52,7 +52,7 @@ const Registration = () => {
           value={address}
           onChangeText={setAddress} 
         />
-        <Text style={styles.pass}>Phone Number</Text>
+        <Text style={styles.pass}>Phone Number </Text>
         <TextInput
           style={styles.inputcollum}
           keyboardType='number-pad'
