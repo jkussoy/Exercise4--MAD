@@ -11,11 +11,14 @@ import {
 } from 'react-native';
 import React from 'react';
 import Registration from './src/components/Registration';
+import UserList from './src/components/UserList';
 
 const App = () => {
   return (
     <View style={styles.Container}>
       <Registration />
+      
+      <UserList />
     </View>
   );
 };
