@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, FlatList } from 'react-native';
+import { View, Text, FlatList, StyleSheet } from 'react-native';
 
 const UserList = () => {
     const [users, setUsers] = useState([]);
@@ -19,20 +19,20 @@ const UserList = () => {
     };
 
     const renderUserItem = ({ item }) => (
-        <View>
-            <Text>Name: {item.name}</Text>
-            <Text>Username: {item.username}</Text>
-            <Text>Email: {item.email}</Text>
-            <Text>Address: {item.address.street}, {item.address.suite}, {item.address.city}, {item.address.zipcode}</Text>
-            <Text>Phone: {item.phone}</Text>
-            <Text>Website: {item.website}</Text>
-            <Text>Company: {item.company.name}</Text>
+        <View style={styles.userContainer}>
+            <Text style={styles.userInfo}>Name: {item.name}</Text>
+            <Text style={styles.userInfo}>Username: {item.username}</Text>
+            <Text style={styles.userInfo}>Email: {item.email}</Text>
+            <Text style={styles.userInfo}>Address: {item.address.street}, {item.address.suite}, {item.address.city}, {item.address.zipcode}</Text>
+            <Text style={styles.userInfo}>Phone: {item.phone}</Text>
+            <Text style={styles.userInfo}>Website: {item.website}</Text>
+            <Text style={styles.userInfo}>Company: {item.company.name}</Text>
         </View>
     );
 
     return (
-        <View>
-            <Text>Users List</Text>
+        <View style={styles.container}>
+            <Text style={styles.title}>Users List</Text>
             <FlatList
                 data={users}
                 renderItem={renderUserItem}
@@ -42,5 +42,34 @@ const UserList = () => {
     );
 };
 
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: 'white',
+        padding: 10,
+    },
+    title: {
+        fontSize: 40,
+        fontWeight: 'bold',
+        marginBottom: 10,
+        marginTop: 10,
+        marginLeft: 10,
+        color: 'black', 
+    },
+    userContainer: {
+        padding: 10,
+        marginVertical: 5,
+        backgroundColor: 'white', 
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: 'black',
+        alignSelf: 'center',
+        width: '95%',
+    },
+    userInfo: {
+        marginBottom: 5,
+        color: 'black',
+    },
+});
 
 export default UserList;
